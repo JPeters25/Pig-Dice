@@ -4,6 +4,9 @@ function diceRoll (min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+  if (diceRoll === 1) {
+
+  }
 
   // diceRoll(1, 6)
 
@@ -11,10 +14,18 @@ function diceRoll (min, max) {
 $(document).ready(function() {
   $("form#pigGame1").submit(function(event){
   event.preventDefault();
-  $("#p1Score").html(diceRoll(1,6));
+  $("#p1Roll").text(diceRoll(1,6));
   });
   $("form#pigGame2").submit(function(event){
   event.preventDefault();
-  $("#p2Score").html(diceRoll(1,6));
+  $("#p2Roll").text(diceRoll(1,6));
+  });
+});
+
+$(document).ready(function () {
+  $("button#hide-score").click(function(event){
+    event.preventDefault();
+    $("#p1Round").text("");
+    $("#p2Round").text("");
   });
 });

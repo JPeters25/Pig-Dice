@@ -11,22 +11,27 @@
 <div class="container">
   <form id="pigGame1">
   <div class="col-md-6" id="player1">  
-    <button type="submit" class="btn-primary" id="player-one-roll">Roll</button>
+    <button type="submit" class="btn-primary" id="player-one-roll">Player 1 Roll</button>
 
     <div class="player1Score">
-    <p>Player 1 score:<span id="p1Score"></span></p>
+    <p>Player 1 Roll: <span id="p1Roll"></span></p>
+    <p>Player 1 Round Score: <span id="p1Round">0</p>
+    <p>Play 1 Total: <span id="p1Total"></span>0</p>
     </div>
   </div>
   </form>
   <form id="pigGame2">
   <div class="col-md-6" id="player2">
-    <button type="submit" class="btn-primary" id="player-two-roll">Roll</button>
+    <button type="submit" class="btn-secondary" id="player-two-roll">Player 2 Roll</button>
   
     <div class="player2Score">
-    <p> Player 2 score:<span id="p2Score"></span></p>
+    <p> Player 2 Roll:<span id="p2Roll"></span></p>
+    <p> Player 2 Round Score: <span id="p2Round">0</span></p>
+    <p> Player 2 Total: <span id="p2Total"></span>0</p>
     </div>
   </div>
   </form>
+  <button type="click" id="hide-score" class="btn btn-danger">Clear Scores</button>
 </div>
 </div>
 </body>
