@@ -6,7 +6,6 @@
 //   max = Math.floor(max);
 //   return Math.floor(Math.random() * (max - min + 1) + min);
 // }
-
 function diceRoll() {
   this.p1Total = 0
   this.p2Total = 0;
