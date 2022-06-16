@@ -21,11 +21,26 @@ diceRoll.prototype.AddRoll = function() {
 }
 
 diceRoll.prototype.GameTotal = function() {
+    this.Total += this.CurrentRoll;
+    newPlayer.CurrentRoll = 0;
+    newPlayer2.CurrentRoll = 0;
     
 }
 
+diceRoll.prototype.GameWinner = function() {
+  if (p1Total === 10){
+    return "Player One Wins";
+  } else if (p2Total === 10){
+    return "Player Two Wins";
+  } else{
+    return "Try again"
+  }
 
-
+  diceRoll.prototype.Reset= function() {
+    CurrentRoll = 0
+  
+  }
+}
 
   // diceRoll(1, 6)
 
@@ -47,12 +62,33 @@ $(document).ready(function () {
   $("#p2Current").text(newPlayer2.CurrentRoll);
   });
 
+  $("#player-one-hold").click(function(event){
+    event.preventDefault();
+    newPlayer.GameTotal();
+    $("#p1Total").text(newPlayer.Total)
+  })
 
-  $("button#test").click(function(){
+  $("#player-two-hold").click(function(event){
+    event.preventDefault();
+    newPlayer2.GameTotal();
+    $("#p2Total").text(newPlayer2.Total)
+  })
+
+
+  $("button#test").click(function(event) {
+    console.log('-here')
     event.preventDefault();
     $("#p1Current").text("");
     $("#p2Current").text("");
     $("#p1Roll").text("");
     $("#p2Roll").text("");
+    $("#p1Total").text("");
+    $("#p2Total").text("");
   });
+
+  $("button#winner").click(function(event){
+    event.preventDefault();
+    $("winner").html()
+
+  })
 });
