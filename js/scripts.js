@@ -15,7 +15,7 @@ diceRoll.prototype.AddRoll = function() {
   if (this.Roll != 1){
     this.Total += this.Roll;
   } else {
-    this.Total = this.Total;
+    this.Total = 0;
   }
 }
 
