@@ -12,11 +12,15 @@
   
   <div class="col-md-4" id="player1">  
     <button type="click" class="btn-primary" id="player-one-roll">Player 1 Roll</button>
+    <button type="click" class="btn-primary" id="player-one-hold">Player 1 Hold</button>
     <div class="dice">
       <p>Your roll: <span id="p1Roll"></span></p>
     </div>
     <div class="player1Score">
-    <p>Player 1 Total: <span id="p1Total"></span></p>
+    <p>Player 1 Current Score: <span id="p1Current"></span></p>
+    </div>
+    <div class="player1Total">
+      <p>Player 1 Total Score: <span id="p1Total"></span></p>
     </div>
   </div>
   
@@ -28,12 +32,14 @@
       <p>Your roll: <span id="p2Roll"></span></p>
     </div>
     <div class="player2Score">
-    <p> Player 2 Total: <span id="p2Total"></span></p>
+    <p> Player 2 Current Score: <span id="p2Current"></span></p>
+    </div>
+    <div class="player2Total">
+    <p> Player 2 Total Score: <span id="p2Total"></span></p>
     </div>
     
   </div>
-
-  <button type="click" id="test" class="btn btn-danger">Clear Scores</button>
+  <button type="submit" id="test" class="btn btn-danger">Clear Scores</button>
 </div>
 </div>
 </body>

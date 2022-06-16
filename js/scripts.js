@@ -2,6 +2,7 @@
 function diceRoll() {
   this.Total = 0;
   this.Roll = 0;
+  this.CurrentRoll = 0;
 }
 
 let newPlayer = new diceRoll(0,0);
@@ -13,13 +14,15 @@ diceRoll.prototype.GetRoll = function(max) {
 
 diceRoll.prototype.AddRoll = function() {
   if (this.Roll != 1){
-    this.Total += this.Roll;
+    this.CurrentRoll += this.Roll;
   } else {
-    this.Total = 0;
+    this.CurrentRoll = 0;
   }
 }
 
-
+diceRoll.prototype.GameTotal = function() {
+    
+}
 
 
 
@@ -33,7 +36,7 @@ $(document).ready(function () {
   newPlayer.GetRoll();
   newPlayer.AddRoll();
   $('#p1Roll').text(newPlayer.Roll)
-  $("#p1Total").text(newPlayer.Total);
+  $("#p1Current").text(newPlayer.CurrentRoll);
   });
 
   $("#player-two-roll").click(function(event){
@@ -41,14 +44,14 @@ $(document).ready(function () {
   newPlayer2.GetRoll();
   newPlayer2.AddRoll();
   $('#p2Roll').text(newPlayer2.Roll)
-  $("#p2Total").text(newPlayer2.Total);
+  $("#p2Current").text(newPlayer2.CurrentRoll);
   });
 
 
-  $("button#test").click(function(event){
+  $("button#test").click(function(){
     event.preventDefault();
-    $("#p1Total").text("");
-    $("#p2Total").text("");
+    $("#p1Current").text("");
+    $("#p2Current").text("");
     $("#p1Roll").text("");
     $("#p2Roll").text("");
   });
