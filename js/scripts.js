@@ -24,7 +24,12 @@ diceRoll.prototype.GameTotal = function() {
     this.Total += this.CurrentRoll;
     newPlayer.CurrentRoll = 0;
     newPlayer2.CurrentRoll = 0;
-    
+}
+
+diceRoll.prototype.Reset = function() {
+  this.total = this.total;
+  newPlayer.Total = 0
+  newPlayer2.Total = 0
 }
 
 diceRoll.prototype.GameWinner = function() {
@@ -34,11 +39,6 @@ diceRoll.prototype.GameWinner = function() {
     return "Player Two Wins";
   } else{
     return "Try again"
-  }
-
-  diceRoll.prototype.Reset= function() {
-    CurrentRoll = 0
-  
   }
 }
 
@@ -76,8 +76,9 @@ $(document).ready(function () {
 
 
   $("button#test").click(function(event) {
-    console.log('-here')
     event.preventDefault();
+    newPlayer.Reset();
+    newPlayer2.Reset();
     $("#p1Current").text("");
     $("#p2Current").text("");
     $("#p1Roll").text("");
