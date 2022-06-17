@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-  
+  <h1>Pig Dice</h1>
   <div class="col-md-6" id="player1">  
     <button type="click" class="btn-primary" id="player-one-roll">Player 1 Roll</button>
     <button type="click" class="btn-primary" id="player-one-hold">Player 1 Hold</button>
@@ -40,9 +40,10 @@
     </div>
     
   </div>
-  <button type="reset" id="test" class="btn btn-danger">Clear Scores</button>
+  <button type="reset" id="reset" class="btn btn-danger">Clear Scores</button>
   <div class="col-md-4">
-    <button type="click" id="winner" class="btn btn-danger">Who Wins?</button>
+    <button type="click" id="winnerCheck" class="btn btn-danger">Who Wins?</button>
+    <p>The Winner is: <span id="winner"></span></p>
   </div>
 </div>
 </div>

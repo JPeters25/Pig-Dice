@@ -28,8 +28,8 @@ diceRoll.prototype.GameTotal = function() {
 
 diceRoll.prototype.Reset = function() {
   this.total = this.total;
-  newPlayer.Total = 0
-  newPlayer2.Total = 0
+  newPlayer.Total = 0;
+  newPlayer2.Total = 0;
 }
 
 diceRoll.prototype.GameWinner = function() {
@@ -75,7 +75,7 @@ $(document).ready(function () {
   })
 
 
-  $("button#test").click(function(event) {
+  $("#reset").click(function(event) {
     event.preventDefault();
     newPlayer.Reset();
     newPlayer2.Reset();
@@ -87,9 +87,11 @@ $(document).ready(function () {
     $("#p2Total").text("");
   });
 
-  $("button#winner").click(function(event){
+  $("#winnerCheck").click(function(event){
     event.preventDefault();
-    $("winner").html()
-
+    newPlayer.GameWinner();
+    $("#winner").text(newPlayer1.GameWinner());
+    $("#p1Total").text(newPlayer.Total);
+    $("#p2Total").text(newPlayer2.Total);
   })
 });
